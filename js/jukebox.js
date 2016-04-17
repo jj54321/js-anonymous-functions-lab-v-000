@@ -20,21 +20,22 @@ function menu() {
   });
 }
 
-function play() {
-  $('#play').on('click', function(e) {
-    $('#songPlaying').html("now playing " + songToPlay + " by " + theArtist);
-    return "now playing " + songToPlay + " by " + theArtist;
-  });
-}
+
+
+  function play(){
+    $('#play').on('click', function(){
+      $('#songPlaying').html("now playing " + songToPlay + " by " + theArtist);
+    });
+  }
 
 function pause() {
-  $('#pause').on('click', function(e) {
+  $('#pause').on('click', function() {
     $('#songPaused').html(songToPlay + " is paused");
   });
 }
 
 function show() {
-  $('#show').on('click', function(e) {
+  $('#show').on('click', function() {
     var songs = "";
     for (var key in jukeboxSongs) {
       songs += jukeboxSongs[key] + " by " + key +  " is available to play. "
